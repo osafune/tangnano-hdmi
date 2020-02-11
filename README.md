@@ -1,13 +1,13 @@
 Tang-nano HDMI-VGA output sample
 ================================
 
-Tang-nanoボードでHDMI出力をするサンプルです。
+Tang-nanoボードでHDMI出力をする実験サンプルです。
 
 - ボード上のRGB LEDがグラデーション点灯します
 - ピン38～45にHDMI信号（VGA解像度）を出力します
 - DVDロゴ(？)のアニメーション
 
-[View tweet
+[View tweet<br>
 <img src="https://raw.githubusercontent.com/osafune/tangnano-hdmi/master/img/twitter_1226971066121310210.png" width="504" height="445">
 ](https://twitter.com/s_osafune/status/1226971066121310210)
 
@@ -36,6 +36,6 @@ Known issues
 
 - 解決の見込みは？
 	- 実験なので特に実用レベルまでブラッシュアップの予定はありません。
-	- MAX10とかCyclone10LPとか使ったほうがいいよ（720pでの安定動作評価済み）
+	- MAX10とかCyclone10LPとか使ったほうがいいよ（→[HDLのMISCモジュール集](https://github.com/osafune/misc_hdl_module#dvi_encoder)）。
 	- GW1NのPLLの限界、IOEの構造上の限界、STAレポートで調整できない限界。
 

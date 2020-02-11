@@ -35,7 +35,7 @@ Known issues
 	- IODELAYで調整できると考えています（プリミティブは実装済み）。
 
 - 解決の見込みは？
-	- 実験なので特に実用レベルまでブラッシュアップの予定はありません。
+	- 実験なので実用レベルへのブラッシュアップの予定はありません。
 	- MAX10とかCyclone10LPとか使ったほうがいいよ（→[HDLのMISCモジュール集](https://github.com/osafune/misc_hdl_module#dvi_encoder)）。
 	- GW1NのPLLの限界、IOEの構造上の限界、STAレポートで調整できない限界。
 

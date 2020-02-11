@@ -7,12 +7,9 @@ Tang-nanoボードでHDMI出力をするサンプルです。
 - ピン38～45にHDMI信号（VGA解像度）を出力します
 - DVDロゴ(？)のアニメーション
 
-[View Twieete](https://twitter.com/s_osafune/status/1226971066121310210)
+[View tweet
 <img src="https://raw.githubusercontent.com/osafune/tangnano-hdmi/master/img/twitter_1226971066121310210.png" width="504" height="445">
-
-<blockquote class="twitter-tweet" data-theme="light"><p lang="ja" dir="ltr">Tang-NANOでHDMI出力できたよー。ロジック使用率は72% <a href="https://t.co/FEUQ0dh5A9">pic.twitter.com/FEUQ0dh5A9</a></p>&mdash; 長船 俊＠Nico-TECH:自造社団 (@s_osafune) <a href="https://twitter.com/s_osafune/status/1226971066121310210?ref_src=twsrc%5Etfw">February 10, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
+](https://twitter.com/s_osafune/status/1226971066121310210)
 
 External connection
 -------------------

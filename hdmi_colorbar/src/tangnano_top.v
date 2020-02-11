@@ -72,7 +72,10 @@ module tangnano_top (
 
 
 	wire		led_r_sig, led_g_sig, led_b_sig;
-	wire [23:0]	logo_color_sig;
+	reg [1:0]	key1_reg;
+	wire [23:0]	lampy_color_sig, logo_color_sig;
+	wire		logo_move_sig;
+
 	wire		vsync_sig, hsync_sig, de_sig;
 	wire [7:0]	cb_r_sig, cb_g_sig, cb_b_sig;
 	wire		vs_out_sig, hs_out_sig, de_out_sig;
@@ -136,15 +139,30 @@ module tangnano_top (
 	u0 (
 		.reset		(reset_sig),
 		.clock		(vclock_sig),
-//		.r_value	(logo_color_sig[23:16]),
-//		.g_value	(logo_color_sig[15:8]),
-//		.b_value	(logo_color_sig[7:0]),
+		.r_value	(lampy_color_sig[23:16]),
+		.g_value	(lampy_color_sig[15:8]),
+		.b_value	(lampy_color_sig[7:0]),
 		.pwm_red	(led_r_sig),
 		.pwm_green	(led_g_sig),
 		.pwm_blue	(led_b_sig)
 	);
 
 	assign {LED_R_n, LED_G_n, LED_B_n} = ~{led_r_sig, led_g_sig, led_b_sig};
+
+/*
+	always @(posedge vclock_sig or posedge reset_sig) begin
+		if (reset_sig) begin
+			key1_reg <= 2'b00;
+		end
+		else begin
+			key1_reg <= {key1_reg[0], ~KEY_n[1]};
+		end
+	end
+
+	assign logo_move_sig = ~key1_reg[1];
+	assign logo_color_sig = (key1_reg[1])? lampy_color_sig : 24'hffffff;
+*/
+	assign logo_move_sig = 1'b1;
 	assign logo_color_sig = 24'hffffff;
 
 
@@ -177,6 +195,7 @@ module tangnano_top (
 		.reset		(reset_sig),
 		.clock		(vclock_sig),
 		.logo_color	(logo_color_sig),
+		.logo_move	(logo_move_sig),
 		.vsync_in	(vsync_sig),
 		.hsync_in	(hsync_sig),
 		.de_in		(de_sig),

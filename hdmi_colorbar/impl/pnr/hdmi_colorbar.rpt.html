@@ -77,7 +77,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Created Time</td>
-<td>Wed Feb 12 00:57:09 2020
+<td>Wed Feb 12 03:11:36 2020
 </td>
 </tr>
 <tr>
@@ -89,11 +89,11 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <!--<h1><a name="Summary">PnR Summaries</a></h1>-->
 <h2><a name="Placer">Placer:</a></h2>
 <p style="font-size: 14px;">Starting Placer:</p>
-<p style="font-size: 14px;">&nbsp &nbsp  Placement Phase 0 ...  &nbsp  REAL time: 0.141 secs</p>
-<p style="font-size: 14px;">&nbsp &nbsp  Placement Phase 1 ...  &nbsp  REAL time: 0.218 secs</p>
-<p style="font-size: 14px;">&nbsp &nbsp  Placement Phase 2 ...  &nbsp  REAL time: 0.25 secs</p>
-<p style="font-size: 14px;">&nbsp &nbsp  Placement Phase 3 ...  &nbsp  REAL time: 1.503 secs</p>
-<p style="font-size: 14px;">Total REAL time to Placement completion: 2.112 secs.<p><br/>
+<p style="font-size: 14px;">&nbsp &nbsp  Placement Phase 0 ...  &nbsp  REAL time: 0.093 secs</p>
+<p style="font-size: 14px;">&nbsp &nbsp  Placement Phase 1 ...  &nbsp  REAL time: 0.078 secs</p>
+<p style="font-size: 14px;">&nbsp &nbsp  Placement Phase 2 ...  &nbsp  REAL time: 0.266 secs</p>
+<p style="font-size: 14px;">&nbsp &nbsp  Placement Phase 3 ...  &nbsp  REAL time: 1.376 secs</p>
+<p style="font-size: 14px;">Total REAL time to Placement completion: 1.813 secs.<p><br/>
 <h2><a name="Resource_Usage_Summary">Resource Usage Summary:</a></h2>
 <table class="summary_table">
 <tr>
@@ -103,12 +103,12 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Logics</td>
-<td>838/1152</td>
+<td>835/1152</td>
 <td>72%</td>
 </tr>
 <tr>
 <td class="label">&nbsp &nbsp --LUTs,ALUs,ROM16s</td>
-<td>838(718 LUTs, 120 ALUs, 0 ROM16s)</td>
+<td>835(715 LUTs, 120 ALUs, 0 ROM16s)</td>
 <td>-</td>
 </tr>
 <tr>
@@ -118,13 +118,13 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Registers</td>
-<td>339/945</td>
-<td>35%</td>
+<td>315/945</td>
+<td>33%</td>
 </tr>
 <tr>
 <td class="label">&nbsp &nbsp --logic Registers</td>
-<td>339/864</td>
-<td>39%</td>
+<td>315/864</td>
+<td>36%</td>
 </tr>
 <tr>
 <td class="label">&nbsp &nbsp --I/O Registers</td>
@@ -133,7 +133,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">CLSs</td>
-<td>461/576</td>
+<td>462/576</td>
 <td>80%</td>
 </tr>
 <tr>
@@ -243,10 +243,10 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <br/>
 <h2><a name="Router">Router:</a></h2>
 <p  style="font-size: 14px;">Starting Router:</p>
-<p  style="font-size: 14px;">&nbsp &nbsp  Route Phase 0: 1475 unrouted; &nbsp REAL time: 0 secs</p>
-<p  style="font-size: 14px;">&nbsp &nbsp  Route Phase 1: 916 unrouted; &nbsp REAL time: 0.172 secs</p>
-<p  style="font-size: 14px;">&nbsp &nbsp  Route Phase 2: 0 unrouted; &nbsp REAL time: 0.234 secs</p>
-<p  style="font-size: 14px;">  Total REAL time to Router completion: 0.406 secs.</p><br/>
+<p  style="font-size: 14px;">&nbsp &nbsp  Route Phase 0: 1460 unrouted; &nbsp REAL time: 0 secs</p>
+<p  style="font-size: 14px;">&nbsp &nbsp  Route Phase 1: 880 unrouted; &nbsp REAL time: 0.14 secs</p>
+<p  style="font-size: 14px;">&nbsp &nbsp  Route Phase 2: 0 unrouted; &nbsp REAL time: 0.219 secs</p>
+<p  style="font-size: 14px;">  Total REAL time to Router completion: 0.359 secs.</p><br/>
 <h2><a name="Global_Clock_Usage_Summary">Global Clock Usage Summary:</a></h2>
 <table class="summary_table">
 <tr>
@@ -698,7 +698,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>IOB3[B]</td>
 <td>LVCMOS33</td>
 <td>UP</td>
-<td>NONE</td>
+<td>H2L</td>
 <td>NA</td>
 <td>NA</td>
 </tr>
@@ -708,7 +708,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>IOB6[B]</td>
 <td>LVCMOS33</td>
 <td>UP</td>
-<td>NONE</td>
+<td>H2L</td>
 <td>NA</td>
 <td>NA</td>
 </tr>
@@ -985,7 +985,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </table>
 <br/>
 <p style="font-size: 16px;"><b>  Placement and routing completed.</b></p>
-<p style="font-size: 16px;"><b><a name="Memory_Usage">Memory usage: 82MB.</a></b></p>
+<p style="font-size: 16px;"><b><a name="Memory_Usage">Memory usage: 86MB.</a></b></p>
 </div><!-- content -->
 </div><!-- main_wrapper -->
 </body>

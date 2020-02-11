@@ -2,7 +2,7 @@
 // TITLE : Logo Overlay
 //
 //     DESIGN : s.osafune@j7system.jp (J-7SYSTEM WORKS LIMITED)
-//     DATE   : 2020/02/10
+//     DATE   : 2020/02/12
 // ===================================================================
 //
 // The MIT License (MIT)
@@ -42,6 +42,7 @@ module logo_overlay (
 	input wire			clock,
 	input wire			reset,
 	input wire [23:0]	logo_color,
+	input wire			logo_move,
 
 	input wire			vsync_in,
 	input wire			hsync_in,
@@ -61,7 +62,7 @@ module logo_overlay (
 	localparam		LOGO_Y_SIZE = 9'd148;
 
 	reg  [1:0]		delay_hs_reg, delay_vs_reg, delay_de_reg;
-	reg  [23:0]		delay_pix0_reg, delay_pix1_reg;
+	reg  [23:0]		delay_pix0_reg;
 	wire			frame_begin_sig, line_begin_sig, line_end_sig, dot_active_sig;
 
 	reg  [8:0]		pos_x_reg, pos_y_reg;
@@ -100,7 +101,6 @@ module logo_overlay (
 			delay_hs_reg <= 2'b00;
 			delay_de_reg <= 2'b00;
 			delay_pix0_reg <= 24'h000000;
-			delay_pix1_reg <= 24'h000000;
 		end
 		else begin
 			delay_vs_reg <= {delay_vs_reg[0], ~vsync_in};
@@ -108,7 +108,6 @@ module logo_overlay (
 			delay_de_reg <= {delay_de_reg[0], de_in};
 
 			delay_pix0_reg <= pixel_in;
-			delay_pix1_reg <= delay_pix0_reg;
 		end
 	end
 
@@ -131,7 +130,7 @@ module logo_overlay (
 			vec_y_reg <= 1'b1;
 		end
 		else begin
-			if (frame_begin_sig) begin
+			if (frame_begin_sig && logo_move) begin
 				if (vec_x_reg) begin
 					pos_x_reg <= pos_x_reg + 1'd1;
 
@@ -225,7 +224,7 @@ module logo_overlay (
 				pix_out_reg <= logo_pixel_sig;
 			end
 			else begin
-				pix_out_reg <= delay_pix1_reg;
+				pix_out_reg <= delay_pix0_reg;
 			end
 		end
 	end

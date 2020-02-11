@@ -4,7 +4,7 @@ Tang-nano HDMI-VGA output sample
 Tang-nanoボードでHDMI出力をする実験サンプルです。
 
 - ボード上のRGB LEDがグラデーション点灯します
-- ピン38～45にHDMI信号（VGA解像度）を出力します
+- ピン38～45にHDMI信号（480p VGA解像度）を出力します
 - DVDロゴ(？)のアニメーション
 
 [View tweet<br>
@@ -16,7 +16,7 @@ External connection
 
 - HDMIコネクタの外部回路
 
-<img src="https://raw.githubusercontent.com/osafune/tangnano-hdmi/master/img/tangnano-hdmiconn.png" width="700" height="657">
+<img src="https://raw.githubusercontent.com/osafune/tangnano-hdmi/master/img/tangnano-hdmiconn.png" width="600" height="564">
 
 
 
@@ -24,11 +24,11 @@ Known issues
 ------------
 
 - 画面にノイズが乗る
-	- 原因として以下の2点が大きな要因です。
+	- 原因として以下の2点が大きな要因です。何回かリセットするといい感じの位相が得られるかもしれません。
 
 - 信号規格がHDMI規格に準拠していない
-	- クロックジッタ、ライン開口ともにHDMI規格には収まっていません。
-	- 簡易接続なので。
+	- ジッタ、アイともにHDMI規格にはたぶん収まっていません。Tang-NANOボード上のDC/DCを止めると多少改善されます。
+	- Tang-NANOボードのクロック周波数から無理矢理VGAクロックを作り出しているので安定性が悪いです。
 
 - データスキューの未調整
 	- TMDS信号群のうちFastとSlowが2ns近く離れている様子。
@@ -36,6 +36,5 @@ Known issues
 
 - 解決の見込みは？
 	- 実験なので実用レベルへのブラッシュアップの予定はありません。
-	- MAX10とかCyclone10LPとか使ったほうがいいよ（→[HDLのMISCモジュール集](https://github.com/osafune/misc_hdl_module#dvi_encoder)）。
-	- GW1NのPLLの限界、IOEの構造上の限界、STAレポートで調整できない限界。
-
+	- GW1NのPLLの限界、IOEの構造上の限界、STAレポートで検証できない限界。
+	- 実用にするならMAX10とかCyclone10LPとか使ったほうがいいよ（→[HDLのMISCモジュール集](https://github.com/osafune/misc_hdl_module#dvi_encoder)）。

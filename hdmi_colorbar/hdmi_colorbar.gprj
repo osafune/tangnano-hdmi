@@ -1,0 +1,18 @@
+<?xml version="1" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project>
+    <Template>FPGA</Template>
+    <Version>5</Version>
+    <Device>gw1n1-004</Device>
+    <FileList>
+        <File path="src/dvi_encoder_gw.vhd" type="file.vhdl" enable="1"/>
+        <File path="src/tangnano_top.v" type="file.verilog" enable="1"/>
+        <File path="src/vga_syncgen.vhd" type="file.vhdl" enable="1"/>
+        <File path="src/ip/pll_tmds_vga.v" type="file.verilog" enable="1"/>
+        <File path="src/tangnano_hdmi.cst" type="file.cst" enable="1"/>
+        <File path="src/rgb_lampy.v" type="file.verilog" enable="1"/>
+        <File path="src/tangnano_hdmi.sdc" type="file.sdc" enable="1"/>
+        <File path="src/ip/logo_pattern_rom.v" type="file.verilog" enable="1"/>
+        <File path="src/logo_overlay.v" type="file.verilog" enable="1"/>
+    </FileList>
+</Project>

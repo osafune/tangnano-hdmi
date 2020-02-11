@@ -1,0 +1,20 @@
+Info    (PA0001) : "C:\PROJECT\temp\gowin\hdmi_colorbar\impl\synthesize\rev_1\hdmi_colorbar.vm" | Reading netlist file.
+Info    (PA0004) : Parsing netlist file 'C:\PROJECT\temp\gowin\hdmi_colorbar\impl\synthesize\rev_1\hdmi_colorbar.vm' completed.
+Info    (PA0006) : Processing netlist completed.
+Info    (CT0002) : Physical Constraint parsed completed.
+Info    (PR0001) : Placement in progress......
+Info    (PR0005) : Routing in progress......
+Info    (PR0002) : Placement and routing completed.
+Info    (TA0001) : Timing analysis completed.
+Info    (FS0001) : Bitstream generation in progress......
+Info    (FS0002) : Bitstream generation completed.
+Info    (PW0001) : Power analysis completed.
+Info    (CM0008) : Generate 'C:\PROJECT\temp\gowin\hdmi_colorbar\impl\pnr\hdmi_colorbar.power.html' file completed.
+Info    (CM0008) : Generate 'C:\PROJECT\temp\gowin\hdmi_colorbar\impl\pnr\hdmi_colorbar.pin.html' file completed.
+Info    (CM0008) : Generate 'C:\PROJECT\temp\gowin\hdmi_colorbar\impl\pnr\hdmi_colorbar.rpt.html' file completed.
+Info    (CM0008) : Generate 'C:\PROJECT\temp\gowin\hdmi_colorbar\impl\pnr\hdmi_colorbar.rpt.txt' file completed.
+Info    (CM0008) : Generate 'C:\PROJECT\temp\gowin\hdmi_colorbar\impl\pnr\hdmi_colorbar.vo' file completed.
+Info    (CM0008) : Generate 'C:\PROJECT\temp\gowin\hdmi_colorbar\impl\pnr\hdmi_colorbar.tr.html' file completed.
+Info    (CM0008) : Generate 'C:\PROJECT\temp\gowin\hdmi_colorbar\impl\pnr\hdmi_colorbar.io.cst' file completed.
+Info    (CM0001) : Wed Feb 12 00:57:09 2020
+

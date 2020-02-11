@@ -1,0 +1,188 @@
+//Copyright (C)2014-2019 Gowin Semiconductor Corporation.
+//All rights reserved.
+
+
+1. PnR Messages
+
+  <Report Title>: Gowin PnR Report
+  <Design File>: C:\PROJECT\temp\gowin\hdmi_colorbar\impl\synthesize\rev_1\hdmi_colorbar.vm
+  <Physical Constraints File>: C:\PROJECT\temp\gowin\hdmi_colorbar\src\tangnano_hdmi.cst
+  <Timing Constraints File>: C:\PROJECT\temp\gowin\hdmi_colorbar\src\tangnano_hdmi.sdc
+  <GOWIN Version>: V1.9.2.02Beta
+  <Part Number>: GW1N-LV1QN48C6/I5
+  <Created Time>:Wed Feb 12 00:57:09 2020
+
+
+2. Placer
+
+  Starting Placer:
+    Placement Phase 0 ...   REAL time: 0.141 secs
+    Placement Phase 1 ...   REAL time: 0.218 secs
+    Placement Phase 2 ...   REAL time: 0.25 secs
+    Placement Phase 3 ...   REAL time: 1.503 secs
+  Total REAL time to Placement completion: 2.112 secs.
+
+
+3. Resource Usage Summary
+
+  ----------------------------------------------------------
+  Resources            | Usage
+  ----------------------------------------------------------
+  Logics               | 838/1152  72%
+    --LUTs,ALUs,ROM16s | 838(718 LUTs, 120 ALUs, 0 ROM16s)
+    --SSRAMs(RAM16s)   | 0
+  Registers            | 339/945  35%
+    --Logic Registers  | 339/864  39%
+    --I/O Registers    | 0/81  0%
+  CLSs                 | 461/576  80%
+  I/O Ports            | 17
+  I/O Bufs             | 12
+    --Input Bufs       | 2
+    --Output Bufs      | 10
+    --Inout Bufs       | 0
+  IOLOGICs             | 8
+  IODELAYs             | 4/27  14%
+  BSRAMs               | 3/4  75%
+  PLLs                 | 1/1  100%
+  DCSs                 | 0/4  0%
+  DQCEs                | 0/12  0%
+  OSCs                 | 0/1  0%
+  User Flashes         | 0/1  0%
+  CLKDIVs              | 0/2  0%
+  DLLDLYs              | 0/2  0%
+  DHCENs               | 0/4  0%
+  ==========================================================
+
+
+
+4. I/O Bank Usage Summary
+
+  -----------------------
+  I/O Bank  | Usage       
+  -----------------------
+  bank 0   | 4/11(36%)   
+  bank 1   | 1/9(11%)    
+  bank 2   | 7/12(58%)   
+  bank 3   | 0/9(0%)     
+  =======================
+
+
+5. Router
+
+  Starting Router:
+    Route Phase 0: 1475 unrouted; REAL time: 0 secs
+    Route Phase 1: 916 unrouted; REAL time: 0.172 secs
+    Route Phase 2: 0  unrouted; REAL time: 0.234 secs
+  Total REAL time to Router completion: 0.406 secs.
+
+
+6. Global Clock Usage Summary
+
+  -------------------------------
+  Global Clock  | Usage       
+  -------------------------------
+  PRIMARY       | 2/8(25%)
+  SECONDARY     | 1/8(12%)
+  GCLK_PIN      | 2/4(50%)
+  PLL           | 1/1(100%)
+  CLKDIV        | 0/2(0%)
+  DLLDLY        | 0/2(0%)
+  ===============================
+
+
+7. Global Clock Signals
+
+  -------------------------------------------
+  Signal         | Global Clock   | Location
+  -------------------------------------------
+  vclock_x10_sig | PRIMARY        | RIGHT
+  vclk_out_reg   | PRIMARY        | LEFT
+  pll_locked_sig | SECONDARY      |  -
+  ===========================================
+
+
+8. Pinout by Port Name
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Port Name     | Loc./Bank  | Dir.  | Site     | IO Type    | Drive      | Pull Mode  | Slew Rate  | Clamp      | OpenDrain  | VREF       | BankVccio 
+----------------------------------------------------------------------------------------------------------------------------------------------------
+XTAL_IN       | 35/1       | in    | IOR5[A]  | LVCMOS33   | NA         | UP         | NA         | NA         | NA         | NA         | 3.3       
+KEY_n[0]      | 15/2       | in    | IOB6[B]  | LVCMOS33   | NA         | UP         | NA         | NA         | NA         | NA         | 3.3       
+KEY_n[1]      | 14/2       | in    | IOB3[B]  | LVCMOS33   | NA         | UP         | NA         | NA         | NA         | NA         | 3.3       
+PSRAM_SIO[0]  | 22/2       | in    | IOB14[B] | LVCMOS33   | NA         | UP         | NA         | NA         | NA         | NA         | 3.3       
+PSRAM_SIO[1]  | 23/2       | in    | IOB16[A] | LVCMOS33   | NA         | UP         | NA         | NA         | NA         | NA         | 3.3       
+PSRAM_SIO[2]  | 24/2       | in    | IOB16[B] | LVCMOS33   | NA         | UP         | NA         | NA         | NA         | NA         | 3.3       
+PSRAM_SIO[3]  | 21/2       | in    | IOB14[A] | LVCMOS33   | NA         | UP         | NA         | NA         | NA         | NA         | 3.3       
+LED_R_n       | 18/2       | out   | IOB10[B] | LVCMOS33   | 8          | UP         | FAST       | NA         | OFF        | NA         | 3.3       
+LED_G_n       | 17/2       | out   | IOB10[A] | LVCMOS33   | 8          | UP         | FAST       | NA         | OFF        | NA         | 3.3       
+LED_B_n       | 16/2       | out   | IOB7[A]  | LVCMOS33   | 8          | UP         | FAST       | NA         | OFF        | NA         | 3.3       
+PSRAM_CE_n    | 19/2       | out   | IOB11[A] | LVCMOS33   | 8          | UP         | FAST       | NA         | OFF        | NA         | 3.3       
+PSRAM_SCK     | 20/2       | out   | IOB11[B] | LVCMOS33   | 8          | UP         | FAST       | NA         | OFF        | NA         | 3.3       
+TMDS_CLOCK    | 39/0       | out   | IOT17[A] | LVCMOS33D  | 8          | NA         | FAST       | NA         | NA         | NA         | 3.3       
+TMDS_DATA0    | 41/0       | out   | IOT14[A] | LVCMOS33D  | 8          | NA         | FAST       | NA         | NA         | NA         | 3.3       
+TMDS_DATA1    | 43/0       | out   | IOT10[A] | LVCMOS33D  | 8          | NA         | FAST       | NA         | NA         | NA         | 3.3       
+TMDS_DATA2    | 45/0       | out   | IOT7[A]  | LVCMOS33D  | 8          | NA         | FAST       | NA         | NA         | NA         | 3.3       
+PIO           | 13/2       | out   | IOB3[A]  | LVCMOS33   | 8          | UP         | FAST       | NA         | OFF        | NA         | 3.3       
+====================================================================================================================================================
+
+
+
+
+9. All Package Pins
+
+-------------------------------------------------------------------------------------------------------------------
+Loc./Bank| Signal        | Dir.  | Site     | IO Type  | Pull Mode | Hysteresis | DiffResistor | SingleResistor
+-------------------------------------------------------------------------------------------------------------------
+48/0     | UNUSED        | -     | IOT2[B]  | -        | -         | -          | -            | -             
+47/0     | UNUSED        | -     | IOT3[B]  | -        | -         | -          | -            | -             
+46/0     | UNUSED        | -     | IOT5[B]  | -        | -         | -          | -            | -             
+45/0     | TMDS_DATA2    | out   | IOT7[A]  | LVCMOS33D | NA        | NA         | NA           | NA            
+44/0     | UNUSED        | out   | IOT7[A]  | LVCMOS33D | NA        | NA         | NA           | NA            
+43/0     | TMDS_DATA1    | out   | IOT10[A] | LVCMOS33D | NA        | NA         | NA           | NA            
+42/0     | UNUSED        | out   | IOT10[A] | LVCMOS33D | NA        | NA         | NA           | NA            
+41/0     | TMDS_DATA0    | out   | IOT14[A] | LVCMOS33D | NA        | NA         | NA           | NA            
+40/0     | UNUSED        | out   | IOT14[A] | LVCMOS33D | NA        | NA         | NA           | NA            
+39/0     | TMDS_CLOCK    | out   | IOT17[A] | LVCMOS33D | NA        | NA         | NA           | NA            
+38/0     | UNUSED        | out   | IOT17[A] | LVCMOS33D | NA        | NA         | NA           | NA            
+-------------------------------------------------------------------------------------------------------------------
+13/2     | PIO           | out   | IOB3[A]  | LVCMOS33 | UP        | NA         | NA           | NA            
+14/2     | KEY_n[1]      | in    | IOB3[B]  | LVCMOS33 | UP        | NONE       | NA           | NA            
+15/2     | KEY_n[0]      | in    | IOB6[B]  | LVCMOS33 | UP        | NONE       | NA           | NA            
+16/2     | LED_B_n       | out   | IOB7[A]  | LVCMOS33 | UP        | NA         | NA           | NA            
+17/2     | LED_G_n       | out   | IOB10[A] | LVCMOS33 | UP        | NA         | NA           | NA            
+18/2     | LED_R_n       | out   | IOB10[B] | LVCMOS33 | UP        | NA         | NA           | NA            
+19/2     | PSRAM_CE_n    | out   | IOB11[A] | LVCMOS33 | UP        | NA         | NA           | NA            
+20/2     | PSRAM_SCK     | out   | IOB11[B] | LVCMOS33 | UP        | NA         | NA           | NA            
+21/2     | PSRAM_SIO[3]  | in    | IOB14[A] | LVCMOS33 | UP        | NONE       | NA           | NA            
+22/2     | PSRAM_SIO[0]  | in    | IOB14[B] | LVCMOS33 | UP        | NONE       | NA           | NA            
+23/2     | PSRAM_SIO[1]  | in    | IOB16[A] | LVCMOS33 | UP        | NONE       | NA           | NA            
+24/2     | PSRAM_SIO[2]  | in    | IOB16[B] | LVCMOS33 | UP        | NONE       | NA           | NA            
+-------------------------------------------------------------------------------------------------------------------
+3/3      | UNUSED        | -     | IOL6[A]  | -        | -         | -          | -            | -             
+4/3      | UNUSED        | -     | IOL6[B]  | -        | -         | -          | -            | -             
+5/3      | UNUSED        | -     | IOL6[C]  | -        | -         | -          | -            | -             
+6/3      | UNUSED        | -     | IOL6[D]  | -        | -         | -          | -            | -             
+7/3      | UNUSED        | -     | IOL6[E]  | -        | -         | -          | -            | -             
+8/3      | UNUSED        | -     | IOL6[F]  | -        | -         | -          | -            | -             
+9/3      | UNUSED        | -     | IOL6[G]  | -        | -         | -          | -            | -             
+10/3     | UNUSED        | -     | IOL7[A]  | -        | -         | -          | -            | -             
+11/3     | UNUSED        | -     | IOL7[B]  | -        | -         | -          | -            | -             
+-------------------------------------------------------------------------------------------------------------------
+35/1     | XTAL_IN       | in    | IOR5[A]  | LVCMOS33 | UP        | NONE       | NA           | OFF           
+34/1     | UNUSED        | -     | IOR6[A]  | -        | -         | -          | -            | -             
+33/1     | UNUSED        | -     | IOR6[B]  | -        | -         | -          | -            | -             
+32/1     | UNUSED        | -     | IOR6[C]  | -        | -         | -          | -            | -             
+31/1     | UNUSED        | -     | IOR6[D]  | -        | -         | -          | -            | -             
+30/1     | UNUSED        | -     | IOR6[F]  | -        | -         | -          | -            | -             
+29/1     | UNUSED        | -     | IOR6[G]  | -        | -         | -          | -            | -             
+28/1     | UNUSED        | -     | IOR6[H]  | -        | -         | -          | -            | -             
+27/1     | UNUSED        | -     | IOR7[A]  | -        | -         | -          | -            | -             
+-------------------------------------------------------------------------------------------------------------------
+===================================================================================================================
+
+
+
+  Placement and routing completed.
+
+
+10. Memory usage: 82MB.

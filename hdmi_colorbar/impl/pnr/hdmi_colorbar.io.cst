@@ -1,0 +1,24 @@
+//Copyright (C)2014-2019 Gowin Semiconductor Corporation.
+//All rights reserved.
+//File Title: Physical Constraints file of ports
+//GOWIN Version: V1.9.2.02Beta
+//Part Number: GW1N-LV1QN48C6/I5
+//Created Time: Wed Feb 12 00:57:09 2020
+
+IO_LOC "XTAL_IN"     35;
+IO_LOC "KEY_n[0]"    15;
+IO_LOC "KEY_n[1]"    14;
+IO_LOC "PSRAM_SIO[0]" 22;
+IO_LOC "PSRAM_SIO[1]" 23;
+IO_LOC "PSRAM_SIO[2]" 24;
+IO_LOC "PSRAM_SIO[3]" 21;
+IO_LOC "LED_R_n"     18;
+IO_LOC "LED_G_n"     17;
+IO_LOC "LED_B_n"     16;
+IO_LOC "PSRAM_CE_n"  19;
+IO_LOC "PSRAM_SCK"   20;
+IO_LOC "TMDS_CLOCK"  39;
+IO_LOC "TMDS_DATA0"  41;
+IO_LOC "TMDS_DATA1"  43;
+IO_LOC "TMDS_DATA2"  45;
+IO_LOC "PIO"         13;

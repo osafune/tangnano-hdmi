@@ -1,0 +1,15 @@
+[General]
+ipc_version=4
+file=logo_pattern_rom
+module=logo_pattern_rom
+target_device=gw1n1-004
+type=ram_rrom
+version=3.0
+
+[Config]
+DEPTH=37888
+LANG=0
+MEM_FILE=C:/PROJECT/temp/gowin/hdmi_colorbar/src/logoconv/dvdlogo.mi
+READ=0
+RESET_MODE=true
+WIDTH=1

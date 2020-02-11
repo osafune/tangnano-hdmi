@@ -1,0 +1,12 @@
+-d C:\PROJECT\temp\gowin\hdmi_colorbar\impl\synthesize\rev_1\hdmi_colorbar.vm
+-p GW1N-1-QFN48-6
+-pn GW1N-LV1QN48C6/I5
+-cst C:\PROJECT\temp\gowin\hdmi_colorbar\src\tangnano_hdmi.cst
+-cfg C:\PROJECT\temp\gowin\hdmi_colorbar\impl\pnr\device.cfg
+-sdc C:\PROJECT\temp\gowin\hdmi_colorbar\src\tangnano_hdmi.sdc
+-bit
+-tr
+-ph
+-oc
+-o
+-timing

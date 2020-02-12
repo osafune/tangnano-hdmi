@@ -3,7 +3,7 @@
 //File Title: Physical Constraints file of ports
 //GOWIN Version: V1.9.2.02Beta
 //Part Number: GW1N-LV1QN48C6/I5
-//Created Time: Wed Feb 12 03:11:36 2020
+//Created Time: Thu Feb 13 01:27:00 2020
 
 IO_LOC "XTAL_IN"     35;
 IO_LOC "KEY_n[0]"    15;

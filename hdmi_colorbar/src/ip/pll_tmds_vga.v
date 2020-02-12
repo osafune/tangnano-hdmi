@@ -3,7 +3,7 @@
 //File Title: IP file
 //GOWIN Version: V1.9.2.02Beta
 //Part Number: GW1N-LV1QN48C6/I5
-//Created Time: Mon Feb 10 00:39:33 2020
+//Created Time: Thu Feb 13 01:04:23 2020
 
 module pll_tmds_vga (clkout, lock, clkoutd, reset, clkin);
 
@@ -57,7 +57,7 @@ defparam pll_inst.CLKFB_SEL = "internal";
 defparam pll_inst.CLKOUT_BYPASS = "false";
 defparam pll_inst.CLKOUTP_BYPASS = "false";
 defparam pll_inst.CLKOUTD_BYPASS = "false";
-defparam pll_inst.DYN_SDIV_SEL = 10;
+defparam pll_inst.DYN_SDIV_SEL = 2;
 defparam pll_inst.CLKOUTD_SRC = "CLKOUT";
 defparam pll_inst.CLKOUTD3_SRC = "CLKOUT";
 defparam pll_inst.DEVICE = "GW1N-1";

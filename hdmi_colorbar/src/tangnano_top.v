@@ -2,7 +2,7 @@
 // TITLE : Tang-NANO top module (HDMI output sample)
 //
 //     DESIGN : s.osafune@j7system.jp (J-7SYSTEM WORKS LIMITED)
-//     DATE   : 2020/02/11
+//     DATE   : 2020/02/12
 // ===================================================================
 //
 // The MIT License (MIT)
@@ -63,13 +63,12 @@ module tangnano_top (
 
 /* ===== Internal nodes ====================== */
 
-	wire		vclock_x10_sig, pll_locked_sig;
-	reg [9:0]	vclk_reg, vclk_x5_reg;
-	reg			vclk_out_reg, vclk_x5_out_reg;
+	wire		vclock_x5_sig, pll_locked_sig;
+	reg [4:0]	vclk_reg;
+	reg			vclk_out_reg;
 	wire		vclock_sig		/* synthesis syn_keep = 1 */;
 	wire		tx_clock_sig	/* synthesis syn_keep = 1 */;
 	wire		reset_sig;
-
 
 	wire		led_r_sig, led_g_sig, led_b_sig;
 	reg [1:0]	key1_reg;
@@ -97,24 +96,21 @@ module tangnano_top (
 	u_pll (
 		.reset		(~KEY_n[0]),		// PLL reset
 		.clkin		(XTAL_IN),			// input 24.0MHz
-		.clkout		(vclock_x10_sig),	// TMDS bitrate (252.0MHz)
+		.clkoutd	(vclock_x5_sig),	// TMDS tx clock (126.0MHz)
 		.lock		(pll_locked_sig)
 	);
 
-	always @(posedge vclock_x10_sig or negedge pll_locked_sig) begin
+	always @(posedge vclock_x5_sig or negedge pll_locked_sig) begin
 		if (!pll_locked_sig) begin
-			vclk_reg <= 10'b1111100000;
-			vclk_x5_reg <= 10'b1010101010;
+			vclk_reg <= 5'b11000;
 		end
 		else begin
-			vclk_reg <= {vclk_reg[8:0], vclk_reg[9]};
-			vclk_x5_reg <= {vclk_x5_reg[8:0], vclk_x5_reg[9]};
+			vclk_reg <= {vclk_reg[3:0], vclk_reg[4]};
 		end
 	end
 
-	always @(posedge vclock_x10_sig) begin
-		vclk_out_reg <= vclk_reg[9];
-		vclk_x5_out_reg <= vclk_x5_reg[9];
+	always @(posedge vclock_x5_sig) begin
+		vclk_out_reg <= vclk_reg[4];
 	end
 
 	BUFG
@@ -123,12 +119,7 @@ module tangnano_top (
 		.O	(vclock_sig)				// Assign to Global Clock Buffer
 	);
 
-	BUFG
-	u_vclk_x5 (
-		.I	(vclk_x5_out_reg),
-		.O	(tx_clock_sig)				// Assign to Global Clock Buffer
-	);
-
+	assign tx_clock_sig = vclock_x5_sig;
 	assign reset_sig = ~pll_locked_sig;
 
 
@@ -150,6 +141,8 @@ module tangnano_top (
 	assign {LED_R_n, LED_G_n, LED_B_n} = ~{led_r_sig, led_g_sig, led_b_sig};
 
 /*
+//	タクタイルスイッチを押すとたまにPLLにリセットがかかる（電源ラインのノイズ？）
+
 	always @(posedge vclock_sig or posedge reset_sig) begin
 		if (reset_sig) begin
 			key1_reg <= 2'b00;

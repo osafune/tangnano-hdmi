@@ -10,17 +10,17 @@
   <Timing Constraints File>: C:\PROJECT\temp\gowin\hdmi_colorbar\src\tangnano_hdmi.sdc
   <GOWIN Version>: V1.9.2.02Beta
   <Part Number>: GW1N-LV1QN48C6/I5
-  <Created Time>:Thu Feb 13 01:27:00 2020
+  <Created Time>:Thu Feb 13 05:03:52 2020
 
 
 2. Placer
 
   Starting Placer:
-    Placement Phase 0 ...   REAL time: 0.12 secs
-    Placement Phase 1 ...   REAL time: 0.099 secs
-    Placement Phase 2 ...   REAL time: 0.305 secs
-    Placement Phase 3 ...   REAL time: 1.442 secs
-  Total REAL time to Placement completion: 1.966 secs.
+    Placement Phase 0 ...   REAL time: 0.109 secs
+    Placement Phase 1 ...   REAL time: 0.087 secs
+    Placement Phase 2 ...   REAL time: 0.273 secs
+    Placement Phase 3 ...   REAL time: 1.417 secs
+  Total REAL time to Placement completion: 1.886 secs.
 
 
 3. Resource Usage Summary
@@ -29,12 +29,12 @@
   Resources            | Usage
   ----------------------------------------------------------
   Logics               | 835/1152  72%
-    --LUTs,ALUs,ROM16s | 835(715 LUTs, 120 ALUs, 0 ROM16s)
+    --LUTs,ALUs,ROM16s | 835(714 LUTs, 121 ALUs, 0 ROM16s)
     --SSRAMs(RAM16s)   | 0
-  Registers            | 299/945  31%
-    --Logic Registers  | 299/864  34%
+  Registers            | 292/945  30%
+    --Logic Registers  | 292/864  33%
     --I/O Registers    | 0/81  0%
-  CLSs                 | 448/576  77%
+  CLSs                 | 461/576  80%
   I/O Ports            | 17
   I/O Bufs             | 12
     --Input Bufs       | 2
@@ -70,10 +70,10 @@
 5. Router
 
   Starting Router:
-    Route Phase 0: 1443 unrouted; REAL time: 0 secs
-    Route Phase 1: 864 unrouted; REAL time: 0.094 secs
-    Route Phase 2: 0  unrouted; REAL time: 0.195 secs
-  Total REAL time to Router completion: 0.289 secs.
+    Route Phase 0: 1417 unrouted; REAL time: 0 secs
+    Route Phase 1: 877 unrouted; REAL time: 0.093 secs
+    Route Phase 2: 0  unrouted; REAL time: 0.207 secs
+  Total REAL time to Router completion: 0.3 secs.
 
 
 6. Global Clock Usage Summary
@@ -185,4 +185,4 @@ Loc./Bank| Signal        | Dir.  | Site     | IO Type  | Pull Mode | Hysteresis 
   Placement and routing completed.
 
 
-10. Memory usage: 116MB.
+10. Memory usage: 112MB.

@@ -2,7 +2,6 @@ Info    (PA0001) : "C:\PROJECT\temp\gowin\hdmi_colorbar\impl\synthesize\rev_1\hd
 Info    (PA0004) : Parsing netlist file 'C:\PROJECT\temp\gowin\hdmi_colorbar\impl\synthesize\rev_1\hdmi_colorbar.vm' completed.
 Info    (PA0006) : Processing netlist completed.
 Info    (CT0002) : Physical Constraint parsed completed.
-Warning (TA1064) : Unable to get clock with name 'tx_clock'.
 Info    (PR0001) : Placement in progress......
 Info    (PR0005) : Routing in progress......
 Info    (PR0002) : Placement and routing completed.
@@ -17,5 +16,5 @@ Info    (CM0008) : Generate 'C:\PROJECT\temp\gowin\hdmi_colorbar\impl\pnr\hdmi_c
 Info    (CM0008) : Generate 'C:\PROJECT\temp\gowin\hdmi_colorbar\impl\pnr\hdmi_colorbar.vo' file completed.
 Info    (CM0008) : Generate 'C:\PROJECT\temp\gowin\hdmi_colorbar\impl\pnr\hdmi_colorbar.tr.html' file completed.
 Info    (CM0008) : Generate 'C:\PROJECT\temp\gowin\hdmi_colorbar\impl\pnr\hdmi_colorbar.io.cst' file completed.
-Info    (CM0001) : Thu Feb 13 01:27:00 2020
+Info    (CM0001) : Thu Feb 13 05:03:52 2020
 

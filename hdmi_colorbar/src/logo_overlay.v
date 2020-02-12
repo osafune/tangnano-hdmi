@@ -29,7 +29,10 @@
 
 `default_nettype none
 
-module logo_overlay (
+module logo_overlay #(
+	parameter	VIEW_X_SIZE		= 640,
+	parameter	VIEW_Y_SIZE		= 480
+) (
 	output wire			test_frame_begin,
 	output wire			test_line_begin,
 	output wire			test_line_end,
@@ -58,14 +61,20 @@ module logo_overlay (
 
 /* ===== Internal nodes ====================== */
 
-	localparam		LOGO_X_SIZE = 10'd256;
-	localparam		LOGO_Y_SIZE = 9'd148;
+	localparam		LOGO_X_SIZE = 256;
+	localparam		LOGO_Y_SIZE = 148;
+	localparam		POS_BEGIN_X = 0 + 1;
+	localparam		POS_BEGIN_Y = 0 + 1;
+	localparam		POS_END_X = (VIEW_X_SIZE-1) - LOGO_X_SIZE - 1;
+	localparam		POS_END_Y = (VIEW_Y_SIZE-1) - LOGO_Y_SIZE - 1;
+
 
 	reg  [1:0]		delay_hs_reg, delay_vs_reg, delay_de_reg;
 	reg  [23:0]		delay_pix0_reg;
 	wire			frame_begin_sig, line_begin_sig, line_end_sig, dot_active_sig;
 
-	reg  [8:0]		pos_x_reg, pos_y_reg;
+	reg  [8:0]		pos_x_reg;
+	reg  [9:0]		pos_y_reg;
 	reg				vec_x_reg, vec_y_reg;
 	wire [8:0]		logo_sy_sig;
 	wire [9:0]		logo_sx_sig;
@@ -134,14 +143,14 @@ module logo_overlay (
 				if (vec_x_reg) begin
 					pos_x_reg <= pos_x_reg + 1'd1;
 
-					if (pos_x_reg == 9'd382) begin
+					if (pos_x_reg == POS_END_X[9:0]) begin
 						vec_x_reg <= 1'b0;
 					end
 				end
 				else begin
 					pos_x_reg <= pos_x_reg - 1'd1;
 
-					if (pos_x_reg == 9'd1) begin
+					if (pos_x_reg == POS_BEGIN_X[9:0]) begin
 						vec_x_reg <= 1'b1;
 					end
 				end
@@ -149,14 +158,14 @@ module logo_overlay (
 				if (vec_y_reg) begin
 					pos_y_reg <= pos_y_reg + 1'd1;
 
-					if (pos_y_reg == 9'd330) begin
+					if (pos_y_reg == POS_END_Y[8:0]) begin
 						vec_y_reg <= 1'b0;
 					end
 				end
 				else begin
 					pos_y_reg <= pos_y_reg - 1'd1;
 
-					if (pos_y_reg == 9'd1) begin
+					if (pos_y_reg == POS_BEGIN_Y[8:0]) begin
 						vec_y_reg <= 1'b1;
 					end
 				end
@@ -165,7 +174,7 @@ module logo_overlay (
 	end
 
 	assign logo_sy_sig = pos_y_reg;
-	assign logo_sx_sig = {1'b0, pos_x_reg};
+	assign logo_sx_sig = pos_x_reg;
 
 
 
@@ -199,7 +208,7 @@ module logo_overlay (
 				if (y_count_reg == logo_sy_sig) begin
 					y_enable_reg <= 1'b1;
 				end
-				else if (y_count_reg == logo_sy_sig + LOGO_Y_SIZE) begin
+				else if (y_count_reg == logo_sy_sig + LOGO_Y_SIZE[8:0]) begin
 					y_enable_reg <= 1'b0;
 				end
 			end
@@ -211,7 +220,7 @@ module logo_overlay (
 				if (x_count_reg == logo_sx_sig) begin
 					x_enable_reg <= 1'b1;
 				end
-				else if (x_count_reg == logo_sx_sig + LOGO_X_SIZE) begin
+				else if (x_count_reg == logo_sx_sig + LOGO_X_SIZE[9:0]) begin
 					x_enable_reg <= 1'b0;
 				end
 			end

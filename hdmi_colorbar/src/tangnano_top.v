@@ -183,7 +183,10 @@ module tangnano_top (
 		.cb_bout	(cb_b_sig)
 	);
 
-	logo_overlay
+	logo_overlay #(
+		.VIEW_X_SIZE	(640),
+		.VIEW_Y_SIZE	(480)
+	)
 	u2 (
 		.reset		(reset_sig),
 		.clock		(vclock_sig),
@@ -204,10 +207,10 @@ module tangnano_top (
 	// ----- HDMI output module -----
 
 	dvi_encoder_gw #(
-		.CLOCK_IODELAY_VALUE	(0),	// These value is adjusted by measuring the actual machine.
+		.CLOCK_IODELAY_VALUE	(54),	// These value is adjusted by measuring the actual machine.
 		.DATA0_IODELAY_VALUE	(0),
-		.DATA1_IODELAY_VALUE	(0),
-		.DATA2_IODELAY_VALUE	(0)
+		.DATA1_IODELAY_VALUE	(5),
+		.DATA2_IODELAY_VALUE	(42)
 	)
 	u3 (
 		.reset		(reset_sig),
